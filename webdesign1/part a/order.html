@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Starbucks|Order</title>
+    <link rel="icon" type="image" href="images/starbucks.ico">
+    
+    <style>
+     
+      .form-style{
+        text-align: center;
+        border : #120f0f solid 1px;
+        color: #0b4f17;
+        padding: 20px 20px;
+        font-family:'Times New Roman', Times, serif;
+        font-size: x-large; 
+        display: flex;
+        flex-direction: column;      
+      }
+      .font{
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .header-style{
+        background-color: rgb(222, 198, 17);
+        font-family: 'Times New Roman', Times, serif;
+        
+      }
+         .button {
+             background-color: #0b4f17;
+             border: none;
+             color: white;
+             padding: 12px 21px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+             font-size: 16px;
+             margin: 14px 40px;
+             cursor: pointer;
+              border-radius: 12px;
+            }
+            #menu-mar{
+            margin-left: 480px;
+            }
+            .header{
+              background-color:rgba(250, 248, 248, 0.724) ;
+              text-align: left;
+              height: 70px;
+        }
+        .logo{
+           color: #0b4f17;
+           margin-left:20px; 
+           font-size:20px;
+        }
+    
+        .title{
+        text-align:center; 
+        padding-top: 20px; 
+        padding-bottom: 20px; 
+        color: rgb(249, 246, 246) !important ; 
+        font: 6em sans-serif;
+        background-color: #0b4f17;
+    }   
+    </style>
+</head>
+
+<body >
+    <div class="header">
+      <span class="logo">Starbucks</span>
+      <img src="images/starbucks-2.png" style="width:auto;height:20px;">
+      <a href="index.html" class="button" id="menu-mar">HOME</a>
+     <a href="menu.html" class="button" >MENU</a>
+     <a href="about.html" class="button">ABOUT US</a>
+     <a href="order.html" class="button">PLACE ORDER</a>
+    </div>
+    <div >
+      <div class="title" >
+        STARBUCKS
+      </div>
+        
+            <div class="form-style">
+            <form>
+                <div>
+                  <h2 class="font">SIP YOUR COFFEE!</h2>
+                  <label for="firstName">First Name : </label>
+                  <input type="text" name="firstName" placeholder="Enter you name" required> <br> <br> 
+                </div>
+
+                <label for="lastName">Last Name : </label>
+                <input type="text" name="lastName" placeholder="Enter you Lastname" required> <br><br>
+
+                <label for="mobNumber">Mobile Number: </label>
+                <input type="tel" name="mobNumber" placeholder="Enter you number" required><br><br>
+
+                <label for="email">E-mail address : </label>
+                <input type="email" name="email" placeholder="Enter you emailid" required><br><br>
+
+                <label for="bookingDate">Date : </label>
+                <input type="datetime-local" name="bookingDate" placeholder="Enter you date and time " required><br><br>
+
+                <label for="tableFor">Order Items : </label>
+                <select name="items" id="items" required>
+                  <option value="icecap">Caffe Americano</option>
+                  <option value="Cappuccino">Cappuccino</option>
+                  <option value="mercedes">Caramel Frappuccino</option>
+                  <option value="audi">White Choclate Mocha</option>
+                </select><br><br>
+
+                <button type="submit" name="button" style="color: #0b4f17;">Book Table</button>
+
+            </form>
+            </div>
+        </div>
+    </div>    
+</body>
+
+</html>

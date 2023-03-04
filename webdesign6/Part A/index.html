@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="form.css">
+    <script src="script.js"></script>
+   
+</head>
+
+<body>
+    <div>
+
+        <h2 style="text-align:center ;">
+            SIGN UP FOR CALCULATOR......!!!
+        </h2>
+        <form id="myForm" class="formSty" action="result.html" ; return false>
+            <table>
+                <tr>
+                    <td><label for="username">Username<span class="reqStyle">*</span></label></td>
+                    <td><input type="text" id="username" name="username"></td>
+                    <td id="userValidation" class="err">&nbsp;</td>
+                </tr>
+                <tr>
+
+
+                <tr>
+                    <td><label for="email">Email Id:<span class="reqStyle">*</span></label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                    <td id="emailIdValidation" class="err">&nbsp;</td>
+                </tr>
+                <tr>
+
+                <tr>
+                    <td><label for="password">Password:<span class="reqStyle">*</span></label></td>
+                    <td><input type="password" id="pw" name="password"></td>
+                    <td id="passwordValidation" class="err">&nbsp;</td>
+                </tr>
+                <tr>
+
+                <tr>
+                    <td><input type="submit" value="Submit" id="submitBtn"></td>
+                    <td id="errmssg" class="err"></td>
+                </tr>
+
+        </form>
+        </table>
+
+
+    </div>
+</body>
+
+</html>

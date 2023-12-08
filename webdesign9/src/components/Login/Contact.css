@@ -1,0 +1,82 @@
+
+#contact {
+    padding: 100px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sectionTitle {
+    margin: 32px 0 64px;
+    font-size: 32px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 24px;
+  }
+  
+  .sectionTitle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100px;
+    border-radius: 70px;
+    height: 4px;
+    background: #7355F7;
+  }
+  
+
+  .contactForm {
+    font-family: 'Roboto', sans-serif;
+    width: 450px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: none;
+    color: #000;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+  }
+  
+  .contactForm input:focus,
+  .contactForm textarea:focus {
+    outline: none !important;
+    border: none;
+    background-color: rgb(243, 240, 255);
+    box-shadow: 0px 0px 5px #7054F2;
+  }
+  
+  .contactForm textarea {
+    height: 120px;
+  }
+  .branBtn {
+    background-color: #7355F7;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .branBtn:hover {
+    background-color: #482bc6;
+  }
+  

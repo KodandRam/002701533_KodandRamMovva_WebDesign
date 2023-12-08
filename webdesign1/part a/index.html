@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Starbucks</title>
+    <link rel="icon" type="image" href="images/starbucks.ico">
+        <style>
+        *{
+            margin: 0;
+            padding: 0;  
+        }
+      
+        .colu{
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        .colu1{
+            width: 33.3%; 
+            padding: 5px;
+            
+            height:300px;
+            margin: auto;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .row{
+            display: flex; 
+            float: left;
+         }
+         .header{
+         background-color:rgba(249, 248, 248, 0.724) ;
+         text-align: left;
+         height: 70px;
+        }
+
+        .flex{
+            display: flex;
+        }
+        #menu-mar{
+        margin-left: 480px;
+         }
+
+         .button {
+    background-color: #0b4f17;
+    border: none;
+    color: white;
+    padding: 12px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 14px 40px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .logo{
+    color: #0b4f17;
+    margin-left:20px; 
+    font-size:20px;
+}
+
+    .title{
+        text-align:center; 
+        padding-top: 20px; 
+        padding-bottom: 20px; 
+        color: rgb(249, 246, 246) !important ; 
+        font: 6em sans-serif;
+        background-color: #0b4f17;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <span class="logo">Starbucks</span>
+        <img src="images/starbucks-2.png" style="width:auto;height:20px;">
+        <a href="index.html" class="button" id="menu-mar">HOME</a>
+       <a href="menu.html" class="button" >MENU</a>
+       <a href="about.html" class="button">ABOUT US</a>
+       <a href="order.html" class="button">PLACE ORDER</a>
+    </div>
+
+    <div class="title" >
+       <p> STARBUCKS <p>
+    </div>
+
+    <div class="row">
+        <div class="colu">
+            <img src="images/sbgif.gif" alt="Picture1" style="width: 700px; border:2px #0b4f17;"> 
+        </div>
+        <div class="colu">
+            <img src="images/starbucks-logo.gif" alt="picture2" style="width: 700px; border:2px white solid;">
+        </div>
+    </div>
+    <b style="margin:auto; margin-left: 530px; font-size: 50px; color:#0b4f17">BESTSELLERS </b>
+    
+    <div class="flex">
+        
+        <div class="colu1"> 
+            <img src="images/pumpkinspice.png" alt="Pumpkin Spice Latte" width="100%" style="height:inherit; border:2px #0b4f17;">
+            <div class="desc">Pumpkin Spice Latte</div>
+        </div>
+        <div class="colu1"> 
+            <img src="images/whitechoclate.png" alt="White Choclate Mocha" width="100%" style="height:inherit;">
+            <div class="desc">White Choclate Mocha</div>
+        </div>
+        <div class="colu1"> 
+            <img src="images/caramel.png" alt="Caramel Frappuccino" width="100%" style="height:inherit;">
+            <div class="desc">Caramel Frappuccino</div>
+        </div>
+        </div>
+</body>
+</html>

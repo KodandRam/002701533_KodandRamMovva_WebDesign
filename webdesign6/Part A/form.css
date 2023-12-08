@@ -1,0 +1,27 @@
+.reqStyle {  
+    color: red;
+ }
+ table {
+    border: 0;
+ }
+  
+ .err {  
+    color: red;
+ }
+  
+ .errBox {  
+    border: 2px solid red;
+ }
+  
+ 
+  
+ td {
+    margin: 0;
+    padding: 3px 10px;
+ }
+
+ .formSty{
+    margin-left: 31rem;
+ }
+
+ 

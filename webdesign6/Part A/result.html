@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+    <link rel="stylesheet" href="form.css">
+
+    <script>
+        $(document).ready(function () {
+            var headerr = document.getElementById("welcomee");
+            var url_string = window.location;
+            var url = new URL(url_string);
+            var name = url.searchParams.get("username");
+            var tvid = url.searchParams.get("id");
+            headerr.innerText = "Welcome " + name;
+            $('body').append(headerr);
+
+            console.log(location.search.substring(1).split("&"));
+
+            $('.input1').keyup(function () {
+                var txtInput1 = $(".input1").val();
+                var regex1 = /[^-?0-9]/g;
+                if (regex1.test(txtInput1)) {
+
+                    $("#errorMssg").show();
+                    $("#errorMssg").html("Please Enter only numbers");
+                    $('#add').prop("disabled", true);
+                    $('#sub').prop("disabled", true);
+                    $('#mul').prop("disabled", true);
+                    $('#div').prop("disabled", true);
+                } else {
+                    $("#errorMssg").hide();
+                    $('#add').prop("disabled", false);
+                    $('#sub').prop("disabled", false);
+                    $('#mul').prop("disabled", false);
+                    $('#div').prop("disabled", false);
+                }
+
+
+            });
+
+            $('.input2').keyup(function () {
+                var txtInput2 = $(".input2").val();
+                var regex2 = /[^-?0-9]/g;
+                if (regex2.test(txtInput2)) {
+
+                    $("#errorMssg1").show();
+                    $("#errorMssg1").html("Please Enter only numbers");
+                    $('#add').prop("disabled", true);
+                    $('#sub').prop("disabled", true);
+                    $('#mul').prop("disabled", true);
+                    $('#div').prop("disabled", true);
+                } else {
+                    $("#errorMssg1").hide();
+                    $('#add').prop("disabled", false);
+                    $('#sub').prop("disabled", false);
+                    $('#mul').prop("disabled", false);
+                    $('#div').prop("disabled", false);
+                }
+
+
+            });
+
+        });
+        $('.input2').blur(function () {
+            if ($("#errorMssg1").show() || $("#errorMssg").show()) {
+                $('#add').prop("disabled", true);
+                $('#sub').prop("disabled", true);
+                $('#mul').prop("disabled", true);
+                $('#div').prop("disabled", true);
+            }
+            else {
+
+                $('#add').prop("disabled", false);
+                $('#sub').prop("disabled", false);
+                $('#mul').prop("disabled", false);
+                $('#div').prop("disabled", false);
+            }
+
+        });
+
+        //         $('.inputs').on('input', function (event) { 
+        //        this.value = this.value.replace(/[^0-9]/g, '');
+        // });
+
+        let txn = (e) => {
+            // $('#result').prop("readonly", true);
+            let num1 = parseInt($("#fistNo").val());
+            let num2 = parseInt($("#secondNo").val());
+
+            var func = e.id;
+            switch (func) {
+                case 'add':
+                    var add = num1 + num2;
+                    $('#result').val(add);
+                    break;
+                case 'sub':
+                    var sub = num1 - num2;
+                    $('#result').val(sub);
+                    break;
+                case 'mul':
+                    var mul = num1 * num2;
+                    $('#result').val(mul);
+                    break;
+                case 'div':
+                    var div = num1 / num2;
+                    $('#result').val(div);
+                    break;
+            }
+
+            // if (addBeenClicked) {
+            //     console.log("inside add");
+            //     var add = num1 + num2;
+            //     $('#result').val(add);
+            // } else if (subBeenClicked) {
+            //     console.log("inside add");
+            //     var subt = num1 - num2;
+            //     $('#result').val(subt);
+            // }            
+        }
+
+    </script>
+
+    <style>
+        #welcomee {
+            position: absolute;
+            padding-bottom: 19px;
+            /* text-align: right; */
+            color: blue;
+            top: -2%;
+            transform: translateY(-50%);
+            right: -10%;
+            transform: translateX(50%);
+            transform: translateX(-100%);
+            padding-bottom: 19px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2 id="welcomee"></h2>
+    <div>
+        <h2>
+            Enter 2 Numbers of your choice.
+        </h2>
+        <div>
+            <label for="fistNo">1st Number :</label>
+            <input class="input1" id="fistNo" type="text" name="fistNo"><span id="errorMssg" class="reqStyle"> </span>
+        </div>
+        <br>
+        <div>
+            <label for="secondNo">2nd Number :</label>
+            <input id="secondNo" class="input2" type="text" name="secondNo"><span id="errorMssg1" class="reqStyle">
+            </span>
+        </div>
+        <br>
+
+        <div>
+            <label for="result"> Your Result :
+                <input id="result" type="text" name="result" readonly></label>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button id="add" value="add" name="add" onclick="txn(this)">Add</button>
+            <button id="sub" value="sub" name="sub" onclick="txn(this)">Subtract</button>
+            <button id="mul" value="mul" name="mul" onclick="txn(this)">Multiply</button>
+            <button id="div" value="div" name="div" onclick="txn(this)">Divide</button>
+        </div>
+    </div>
+</body>
+
+</html>
